@@ -18,8 +18,13 @@ describe("function i", () => {
     expect(i(input)).toBe(output);
   });
   test("The number of vowels should not be greater than or equal to the number of consonants", () => {
-    let input = "East";
+    let input = "east";
     let output = "Invalid word";
+    expect(i(input)).toBe(output);
+  });
+  test("prefix's word with i if the word meets the conditions", () => {
+    let input = "box";
+    let output = "ibox";
     expect(i(input)).toBe(output);
   });
 });

@@ -1,5 +1,7 @@
 // Many people know that Apple uses the letter "i" in almost all of its devices to emphasize its personality.
 
+const { CustomConsole } = require("@jest/console");
+
 // And so John, a programmer at Apple, was given the task of making a program that would add that letter to every word. Let's help him do it, too.
 
 // Task:
@@ -11,27 +13,19 @@
 // If the word does not meet the rules, we return "Invalid word".
 
 exports.i = (word) => {
-  const vowels = ["aeiouy"];
-  const consonants = ["bcdfghjklmnpqrstvwxz"];
-  let vowelCount = 0;
-  let consonantsCount = 0;
   if (typeof word === "string" && word[0] === "I") {
     return word;
   }
-  for (let i = 0; i < word.length; i++) {
-    for (let j = 0; j < vowels.length; j++) {
-      if (word[i] === vowels[j]) {
-        console.log(word[i]);
-        vowelCount++;
-      }
-    }
-    for (let k = 0; k < consonants.length; k++) {
-      if (word[i] === consonants[k]) {
-        consonantsCount++;
-      }
-    }
+  if (typeof word !== "string") {
+    return "Invalid word";
   }
-  console.log(vowelCount, consonantsCount);
 
-  return "Invalid word";
+  console.log(typeof word);
+  if (
+    word.match(/[aeiou]/g).length >=
+    word.match(/[bcdfghjklmnpqrstvwxz]/g).length
+  ) {
+    return "Invalid word";
+  }
+  return "i" + word;
 };
