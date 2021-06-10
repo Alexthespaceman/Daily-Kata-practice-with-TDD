@@ -3,6 +3,6 @@
     "jest": "^27.0.4"
   },
   "scripts": {
-    "test": "jest __tests__/kata-test-2.js"
+    "test": "jest __tests__/kata3.test.js"
   }
 }
