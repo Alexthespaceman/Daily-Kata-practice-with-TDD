@@ -1,4 +1,3 @@
-const { expect } = require("@jest/globals");
 const { i } = require("../Katats/kata1");
 
 describe("function i", () => {

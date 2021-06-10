@@ -19,8 +19,6 @@ exports.i = (word) => {
   if (typeof word !== "string") {
     return "Invalid word";
   }
-
-  console.log(typeof word);
   if (
     word.match(/[aeiou]/g).length >=
     word.match(/[bcdfghjklmnpqrstvwxz]/g).length
