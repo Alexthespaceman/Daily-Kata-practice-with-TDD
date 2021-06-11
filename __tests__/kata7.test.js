@@ -7,4 +7,9 @@ describe("addArrays", () => {
   test("should return second numbers of each of the two input arrays, added into a new returned array ", () => {
     expect(addArrays([3, 4], [1, 2])).toEqual([4, 6]);
   });
+  test("should return all numbers of the two input arrays, added into a new returned array ", () => {
+    expect(addArrays([3, 4, 5, 3, 2], [1, 2, 4, 2, 5])).toEqual([
+      4, 6, 9, 5, 7,
+    ]);
+  });
 });

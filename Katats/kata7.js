@@ -2,11 +2,11 @@
 // Raise an error if input arguments are not of equal length.
 
 exports.addArrays = (arr1, arr2) => {
-  let newArr = [];
   if (arr1.length !== arr2.length) {
     return "Error";
   }
-  newArr.push(arr1[0] + arr2[0]);
-  newArr.push(arr1[1] + arr2[1]);
-  return newArr;
+
+  return arr1.map((el, i) => {
+    return arr1[i] + arr2[i];
+  });
 };
