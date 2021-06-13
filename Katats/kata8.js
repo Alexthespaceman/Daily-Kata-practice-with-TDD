@@ -7,10 +7,14 @@ exports.sortArray = (array) => {
   const even = array.filter((num) => {
     return num % 2 == 0;
   });
-  const odd = array.filter((num, i, arr) => {
-    return num % 2 == 1;
-  });
-  console.log(odd);
+  const sortedOdd = array
+    .filter((num, i, arr) => {
+      return num % 2 == 1;
+    })
+    .sort();
+
+  console.log(sortedOdd);
+
   if (even.length == array.length) {
     return array;
   }
